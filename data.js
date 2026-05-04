@@ -4,7 +4,13 @@ window.siteData = {
   affiliation: "CS PhD Candidate - University of Illinois Chicago",
   headline: "Explainable data systems researcher working across databases, weak supervision, and LLM-assisted data understanding.",
   summary:
-    "I am a PhD student in Computer Science at UIC advised by Prof. Boris Glavic. My research focuses on explainable data-driven systems, including provenance-based explanations, contextual query explanations, data repair, and programmatic weak supervision.",
+    "I am a PhD student in Computer Science at UIC advised by Prof. Boris Glavic, and I am a member of the UIC DBGroup. My research focuses on explainable data-driven systems, including provenance-based explanations, contextual query explanations, data repair, and programmatic weak supervision.",
+  summaryLinks: [
+    {
+      label: "UIC DBGroup",
+      url: "https://www.cs.uic.edu/~bglavic/dbgroup/"
+    }
+  ],
   jobMarket:
     "I am actively looking for full-time industry research, applied scientist, research engineer, and data/ML systems roles.",
   currentTitle: "On the 2026 job market",

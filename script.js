@@ -21,6 +21,29 @@ const makeLink = (label, url) => {
   return link;
 };
 
+const setLinkedText = (selector, value, links = []) => {
+  document.querySelectorAll(selector).forEach((element) => {
+    element.textContent = "";
+    const replacements = links.filter((link) => value.includes(link.label));
+
+    if (replacements.length === 0) {
+      element.textContent = value || "";
+      return;
+    }
+
+    let cursor = 0;
+    replacements.forEach((link) => {
+      const index = value.indexOf(link.label, cursor);
+      if (index < 0) return;
+
+      element.append(document.createTextNode(value.slice(cursor, index)));
+      element.append(makeLink(link.label, link.url));
+      cursor = index + link.label.length;
+    });
+    element.append(document.createTextNode(value.slice(cursor)));
+  });
+};
+
 const renderTopLinks = () => {
   const container = document.querySelector("#top-links");
   if (!container) return;
@@ -166,7 +189,7 @@ const renderGallery = () => {
 setText("[data-field='name']", data.name);
 setText("[data-field='initials']", data.initials);
 setText("[data-field='affiliation']", data.affiliation);
-setText("[data-field='summary']", data.summary);
+setLinkedText("[data-field='summary']", data.summary, data.summaryLinks);
 setText("[data-field='jobMarket']", data.jobMarket);
 setText("[data-field='researchIntro']", data.researchIntro);
 setText("[data-field='galleryIntro']", data.galleryIntro);
