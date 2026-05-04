@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chenjie Li</title>
+    <meta
+      name="description"
+      content="Chenjie Li, PhD student in Computer Science at the University of Illinois Chicago."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro" id="top">
+        <div class="intro-text">
+          <h1 data-field="name">Chenjie Li</h1>
+          <p class="subtitle" data-field="affiliation">CS PhD Candidate - University of Illinois Chicago</p>
+          <p data-field="summary"></p>
+          <p data-field="jobMarket"></p>
+          <nav class="link-line" id="top-links" aria-label="Profile links"></nav>
+        </div>
+        <div class="avatar">
+          <img src="assets/photos/profile.jpg" alt="Chenjie Li">
+        </div>
+      </header>
+
+      <section id="research" aria-labelledby="research-title">
+        <h2 id="research-title">Research</h2>
+        <p data-field="researchIntro"></p>
+        <ul class="plain-list" id="research-list"></ul>
+      </section>
+
+      <section id="internships" aria-labelledby="internships-title">
+        <h2 id="internships-title">Internships</h2>
+        <div class="internship-list" id="internship-list"></div>
+      </section>
+
+      <section id="publications" aria-labelledby="publications-title">
+        <h2 id="publications-title">Selected Publications</h2>
+        <ol class="publication-list" id="publication-list"></ol>
+      </section>
+      
+      <section id="service" aria-labelledby="service-title">
+        <h2 id="service-title">Service & Teaching</h2>
+        <div id="service-list"></div>
+      </section>
+
+      <section id="gallery" class="optional-section" aria-labelledby="gallery-title" hidden>
+        <h2 id="gallery-title">Gallery</h2>
+        <p data-field="galleryIntro"></p>
+        <div class="gallery-list" id="gallery-list"></div>
+      </section>
+
+      <footer>
+        <span>Last updated <span id="year"></span>.</span>
+      </footer>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
