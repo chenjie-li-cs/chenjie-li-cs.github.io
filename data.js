@@ -192,7 +192,7 @@ window.siteData = {
     },
     {
       label: "GitHub",
-      url: "https://github.com/JayLi2018",
+      url: "https://github.com/chenjie-li-cs",
       description: "Github profile with research code, projects, and contributions."
     },
     {
