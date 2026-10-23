@@ -118,19 +118,6 @@ const renderPublications = () => {
   });
 };
 
-const renderNews = () => {
-  const list = document.querySelector("#news-list");
-  if (!list) return;
-
-  list.innerHTML = "";
-
-  (data.news || []).forEach((entry) => {
-    const item = document.createElement("li");
-    item.innerHTML = `<strong>${entry.date}:</strong> ${entry.text}`;
-    list.append(item);
-  });
-};
-
 const renderEducation = () => {
   const list = document.querySelector("#education-list");
   if (!list) return;
@@ -227,7 +214,6 @@ setText("[data-field='researchIntro']", data.researchIntro);
 setText("[data-field='galleryIntro']", data.galleryIntro);
 
 renderTopLinks();
-renderNews();
 renderEducation();
 renderResearch();
 renderInternships();
