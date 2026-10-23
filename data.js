@@ -44,6 +44,21 @@ window.siteData = {
     { label: "CV", url: "assets/Chenjie-Li-CV.pdf", style: "ghost" }
   ],
 
+  news: [
+    {
+      date: "Sep. 2026",
+      text: "Returned to CCC Intelligent Solutions as a Data Science Engineer Intern, working on production ML pipelines for insurance-claim video data."
+    },
+    {
+      date: "Aug. 2025",
+      text: "RuleCleaner, our framework for refining labeling functions with limited labeled data, was presented at KDD 2025."
+    },
+    {
+      date: "Aug. 2025",
+      text: "Received the Outstanding Reviewer award for KDD 2025."
+    }
+  ],
+
   education: [
     {
       school: "University of Illinois Chicago",
