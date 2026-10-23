@@ -108,7 +108,39 @@ const renderPublications = () => {
       <div>${publication.authors}</div>
       <div class="meta">${publication.venue} <span class="publication-links"></span></div>
     `;
-    item.querySelector(".publication-links").append(makeLink("[paper]", publication.url));
+    const links = item.querySelector(".publication-links");
+    links.append(makeLink("[paper]", publication.url));
+    if (publication.code) {
+      links.append(document.createTextNode(" "));
+      links.append(makeLink("[code]", publication.code));
+    }
+    list.append(item);
+  });
+};
+
+const renderNews = () => {
+  const list = document.querySelector("#news-list");
+  if (!list) return;
+
+  list.innerHTML = "";
+
+  (data.news || []).forEach((entry) => {
+    const item = document.createElement("li");
+    item.innerHTML = `<strong>${entry.date}:</strong> ${entry.text}`;
+    list.append(item);
+  });
+};
+
+const renderEducation = () => {
+  const list = document.querySelector("#education-list");
+  if (!list) return;
+
+  list.innerHTML = "";
+
+  (data.education || []).forEach((entry) => {
+    const item = document.createElement("li");
+    const note = entry.note ? ` — ${entry.note}` : "";
+    item.innerHTML = `<strong>${entry.school}.</strong> ${entry.degree}, ${entry.dates}${note}.`;
     list.append(item);
   });
 };
@@ -195,6 +227,8 @@ setText("[data-field='researchIntro']", data.researchIntro);
 setText("[data-field='galleryIntro']", data.galleryIntro);
 
 renderTopLinks();
+renderNews();
+renderEducation();
 renderResearch();
 renderInternships();
 renderPublications();

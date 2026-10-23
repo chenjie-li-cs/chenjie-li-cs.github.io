@@ -44,6 +44,42 @@ window.siteData = {
     { label: "CV", url: "assets/Chenjie-Li-CV.pdf", style: "ghost" }
   ],
 
+  news: [
+    {
+      date: "Sep. 2026",
+      text: "Returned to CCC Intelligent Solutions as a Data Science Engineer Intern, working on production ML pipelines for insurance-claim video data."
+    },
+    {
+      date: "Aug. 2025",
+      text: "RuleCleaner, our framework for refining labeling functions with limited labeled data, was presented at KDD 2025."
+    },
+    {
+      date: "Aug. 2025",
+      text: "Received the Outstanding Reviewer award for KDD 2025."
+    }
+  ],
+
+  education: [
+    {
+      school: "University of Illinois Chicago",
+      degree: "Ph.D. in Computer Science",
+      dates: "Expected Dec. 2026",
+      note: "Advisor: Prof. Boris Glavic"
+    },
+    {
+      school: "Illinois Institute of Technology",
+      degree: "M.S. in Data Science",
+      dates: "2018 - 2019",
+      note: ""
+    },
+    {
+      school: "Guizhou University",
+      degree: "B.S. in Electrical Engineering",
+      dates: "2013 - 2017",
+      note: ""
+    }
+  ],
+
   researchAreas: [
     {
       title: "Explainable Data Systems",
@@ -69,7 +105,8 @@ window.siteData = {
       authors: "Chenjie Li, Amir Gilad, Boris Glavic, Zhengjie Miao, Sudeepa Roy",
       description:
         "Introduces RuleCleaner, a framework for repairing weak-supervision labeling functions with a small set of labeled examples.",
-      url: "https://doi.org/10.1145/3711896.3737102"
+      url: "https://doi.org/10.1145/3711896.3737102",
+      code: "https://github.com/chenjie-li-cs/RuleCleanerKDD25"
     },
     {
       venue: "VLDB DATAI 2024",
@@ -80,12 +117,13 @@ window.siteData = {
       url: "https://vldb.org/workshops/2024/proceedings/DATAI/DATAI-3.pdf"
     },
     {
-      venue: "PVLDB 2022",
+      venue: "PVLDB 2022 (Demonstration Track)",
       title: "CaJaDE: Explaining Query Results by Augmenting Provenance with Context",
       authors: "Chenjie Li, Juseung Lee, Zhengjie Miao, Boris Glavic, Sudeepa Roy",
       description:
         "Demonstrates a system for explaining query results through provenance enriched with contextual information.",
-      url: "https://doi.org/10.14778/3554821.3554852"
+      url: "https://doi.org/10.14778/3554821.3554852",
+      code: "https://github.com/IITDBGroup/CaJaDe"
     },
     {
       venue: "SIGMOD 2021",
@@ -110,13 +148,14 @@ window.siteData = {
       company: "CCC Intelligent Solutions",
       role: "Data Science Engineer Intern",
       location: "Chicago, IL",
-      dates: "May 2025 - Dec. 2025",
+      dates: "May 2025 - Dec. 2025; Sept. 2026 - Present",
       logo: "assets/logos/ccc-logo.svg",
       alt: "CCC Intelligent Solutions logo",
       bullets: [
-        "Designed and optimized a distributed video sanitization pipeline using Spark, AWS, Airflow, and Kubernetes.",
-        "Developed a ground-truth generation and parameter-tuning framework for a computer-vision video sanitization pipeline.",
-        "Improved metadata ingestion throughput by 2x and automated Grafana dashboards for data engineering pipelines."
+        "Built an automated <strong>video sanitization pipeline</strong> for insurance-claim data, integrating Airflow, Kubernetes, AWS S3, and GPU-based ML inference - from data ingestion to automated anonymization of faces and license plates.",
+        "Fine-tuned <strong>YOLOv8</strong> for face and license-plate detection, reaching <strong>0.908 mAP50</strong> after progressive training on OpenImages and internal claim data.",
+        "Improved metadata ingestion throughput by <strong>2x</strong>.",
+        "Built MySQL-backed <strong>Grafana dashboards</strong> to monitor pipeline execution, ingestion health, failure patterns, and processing outcomes."
       ]
     },
     {
@@ -127,9 +166,9 @@ window.siteData = {
       logo: "assets/logos/megagon-logo.webp",
       alt: "Megagon Labs logo",
       bullets: [
-        "Explored LLM capabilities on table understanding tasks.",
-        "Designed prompts for semantic type detection and labeling-function generation.",
-        "Addressed label-model scalability issues and published the work at the VLDB 2024 DATAI workshop."
+        "Built an <strong>end-to-end LLM-assisted data labeling pipeline</strong> using GPT-4 few-shot prompting to generate labeling functions for semantic type detection.",
+        "Wrote rule-based labeling functions (keywords, regular expressions, statistical features) and integrated <strong>Snorkel</strong> to aggregate noisy predictions into pseudo-labeled training data.",
+        "Scaled the stacked weak-supervision architecture to <strong>570K tables and 255 semantic types</strong>; published the work at the <strong>VLDB 2024 DATAI workshop</strong>."
       ]
     }
   ],
